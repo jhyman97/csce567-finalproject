@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Electric Vehicle Data, Popularity vs Environment, 2010-2023</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+</head>
+<body>
+    <header>
+        <p>Global Electric Vehicle Data, Popularity vs Environment, 2010-2023</p>
+        <ul>
+            <li><a href="#background">Background</a></li>
+            <li><a href="#total-ev-sales">Total EV Sales</a></li>
+            <li><a href="#electricity-demand-of-evs">Electricity Demand of EVs</a></li>
+        </ul>
+    </header>
+    <div class="content">
+        <h1 id="h">Global Electric Vehicle Data, Popularity vs Environment, 2010-2023</h1>
+            <div id="background" class="section">
+                <h2>Background</h2>
+            <p>It is no secret that electric vehicles have been more and more prominent throughout the world 
+                since recent years. Not even 4 or 5 years ago, it would be a fairly rare occurrence to encounter one 
+                while driving, but that has now changed with the increasing popularity of EVs. This can be attributed 
+                to a number of different things, such as the impressive software capabilities they offer, being the 
+                arguably cleaner energy version of their gas alternatives, as well as the much cheaper cost it takes to 
+                charge an EV compared to filling up a car with gasoline. They will most likely not surpass the amount 
+                of gas-powered cars out on the roads in the near future, however it is hard not to take notice to how 
+                much they have sprawled in popularity within such a short frame of time.</p>
+            <p>
+                Though, their popularity comes at the cost of controversy--they have become topics of heated debate with things such as the argument 
+                of whether or not EVs really are more environmentally friendly over gasoline powered vehicles, as well 
+                as some having concerns over how expensive the average EV currently goes for. Despite this, the ever-increasing popularity of EVs present a different side of the story, perhaps implying that these concerns 
+                are not as important or as outspoken as presented in the media.
+            </p>
+            <p>
+                The purpose of the following visualizations is to graphically demonstrate the rapid growth of EVs around the world and compare this to 
+                their environmental impact, namely their electricity demand and oil displacement. It is projected that total EV sales by 2035 are to increase by 536%, however their
+                electricty demand and oil displacement are also to increase by 1443% and 1114% respectively.
+            </p>
+            <p>The data for these visualizations can be found <a href="https://www.iea.org/data-and-statistics/data-tools/global-ev-data-explorer">here</a>, from the IEA (International Energy Agency)'s Global EV Data Explorer.</p>
+        </div>
+        <div id="total-ev-sales" class="section">
+            <h2>Total EV Sales</h2>
+            <p>
+                Total EV sales detail the total amount of electric vehicles sold since 2010. 
+                EVs accounted for about 18% of all cars sold within 2023, which is a 14% increase from 2022. However, these sales are significantly concentrated in a few 
+                geographical areas, where just under 60% of new EV registrations were made in China, just under 25% in Europe, and 10% in the United States, which make up nearly 
+                95% of all global electric car sales. If these trends continue, then by the end of 2024, electric car sales could account for more than one in five cars sold worldwide.
+            </p>
+            <div class="viz">
+                <div class="charts">
+                    <div id="v1-1" class="v1">
+                        <tableau-viz
+                            src="https://public.tableau.com/views/TotalEVSalesbyContinentalRegions/WorldChoropleth?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+                        >
+
+                        </tableau-viz>
+                    </div>
+                    <div id="v1-2" class="v1 hidden">
+                        <tableau-viz
+                            src="https://public.tableau.com/views/TotalEVSalesbyCountryAmericas/AmericasChoropleth?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+                        >
+
+                        </tableau-viz>
+                    </div>
+                    <div id="v1-3" class="v1 hidden">
+                        <tableau-viz
+                            src="https://public.tableau.com/views/TotalEVSalesbyCountryEurope/EuropeChoropleth?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+                        >
+
+                        </tableau-viz>
+                    </div>
+                    <div id="v1-4" class="v1 hidden">
+                        <tableau-viz
+                            src="https://public.tableau.com/views/TotalEVSalesbyCountryAsiaAfricaAustralia/AsiaAfricaAustChoropleth?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+                        >
+
+                        </tableau-viz>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button id="b1-1">World</button>
+                    <button id="b1-2">North/South America</button>
+                    <button id="b1-3">Europe</button>
+                    <button id="b1-4">Asia/Africa/Australia</button>
+                </div>
+            </div>
+        </div>
+        <div id="electricity-demand-of-evs" class="section">
+            <h2>Electricity Demand of EVs</h2>
+            <div class="viz">
+                <div class="charts">
+                    <div id="v2-1" class="v2">
+                        <tableau-viz
+                            src="https://public.tableau.com/views/ElectricityDemandofEVsbyGWhUSAvsWorld/EDemandUSAvWorld?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+                        >
+
+                        </tableau-viz>
+                    </div>
+                    <div id="v2-2" class="v2 hidden">
+                        <tableau-viz
+                            src="https://public.tableau.com/views/ElectricityDemandofEVsbyGWhEuropevsWorld/EDemandEuropevWorld?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+                        >
+
+                        </tableau-viz>
+                    </div>
+                    <div id="v2-3" class="v2 hidden">
+                        <tableau-viz
+                            src="https://public.tableau.com/views/ElectricityDemandofEVsbyGWhChinavsWorld/EDemandChinavWorld?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+                        >
+
+                        </tableau-viz>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button id="b2-1">USA vs World</button>
+                    <button id="b2-2">Europe vs World</button>
+                    <button id="b2-3">China vs World</button>
+                </div>
+            </div>
+        </div>
+        
+        <h2>Oil Displacement</h2>
+        <div class="viz">
+            <div class="charts">
+                <div id="v3-1" class="v3">
+                    <tableau-viz
+                        src="https://public.tableau.com/views/OilDisplacementbyMillionsofBarrelsperDayMbdUSAvsWorld/OilDisplacementUSAvWorld?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+                    >
+
+                    </tableau-viz>
+                </div>
+                <div id="v3-2" class="v3 hidden">
+                    <tableau-viz
+                        src="https://public.tableau.com/views/OilDisplacementbyMillionsofBarrelsperDayMbdEuropevsWorld/OilDisplacementEuropevWorld?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+                    >
+
+                    </tableau-viz>
+                </div>
+                <div id="v3-3" class="v3 hidden">
+                    <tableau-viz
+                        src="https://public.tableau.com/views/OilDisplacementbyMillionsofBarrelsperDayMbdChinavsWorld/OilDisplacementChinavWorld?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+                    >
+
+                    </tableau-viz>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="b3-1">USA vs World</button>
+                <button id="b3-2">Europe vs World</button>
+                <button id="b3-3">China vs World</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
