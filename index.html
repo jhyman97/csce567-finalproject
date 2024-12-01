@@ -19,13 +19,14 @@
             <li><a href="#background">Background</a></li>
             <li><a href="#total-ev-sales">Total EV Sales</a></li>
             <li><a href="#electricity-demand-of-evs">Electricity Demand of EVs</a></li>
+            <li><a href="#oil-displacement">Oil Displacement</a></li>
         </ul>
     </header>
     <div class="content">
         <h1 id="h">Global Electric Vehicle Data, Popularity vs Environment, 2010-2023</h1>
             <div id="background" class="section">
                 <h2>Background</h2>
-            <p>It is no secret that electric vehicles have been more and more prominent throughout the world 
+            <p>It is no secret that electric vehicles (EVs) have been more and more prominent throughout the world 
                 since recent years. Not even 4 or 5 years ago, it would be a fairly rare occurrence to encounter one 
                 while driving, but that has now changed with the increasing popularity of EVs. This can be attributed 
                 to a number of different things, such as the impressive software capabilities they offer, being the 
@@ -45,6 +46,7 @@
                 electricty demand and oil displacement are also to increase by 1443% and 1114% respectively.
             </p>
             <p>The data for these visualizations can be found <a href="https://www.iea.org/data-and-statistics/data-tools/global-ev-data-explorer">here</a>, from the IEA (International Energy Agency)'s Global EV Data Explorer.</p>
+            <p class="bold">**You may have to refresh the page if a visualization does not appear when switching between them.**</p>
         </div>
         <div id="total-ev-sales" class="section">
             <h2>Total EV Sales</h2>
@@ -89,12 +91,19 @@
                     <button id="b1-1">World</button>
                     <button id="b1-2">North/South America</button>
                     <button id="b1-3">Europe</button>
-                    <button id="b1-4">Asia/Africa/Australia</button>
+                    <button id="b1-4">Asia, Africa, Australia</button>
                 </div>
             </div>
         </div>
         <div id="electricity-demand-of-evs" class="section">
             <h2>Electricity Demand of EVs</h2>
+            <p>
+                Electricity demand of EVs graph the total amount of electricity taken by EVs in GWh (Gigawatt hours, 1 GWh = 1,000,000 kWh = 1,000,000,000 Wh). 
+                Of course, with the globally increasing amount of EVs being produced, this would translate to a higher electricity demand. Globally, in 2023, EVs consumed 
+                around 120 TWh (Terawatt hours, 1 TWh = 1000 GWh), which is the same as Norway's total electricty demand in the same year. EVs accounted for around 0.5% of 
+                the world's total electricity consumption in 2023, and around 1% in China and Europe. China is the largest consumer of electricity for EVs, accounting for about 45% 
+                for electricity demand, however their share is projected to fall down to less than 30% by 2035 due to a strong EV growth in both Europe and the United States.
+            </p>
             <div class="viz">
                 <div class="charts">
                     <div id="v2-1" class="v2">
@@ -126,39 +135,50 @@
                 </div>
             </div>
         </div>
-        
-        <h2>Oil Displacement</h2>
-        <div class="viz">
-            <div class="charts">
-                <div id="v3-1" class="v3">
-                    <tableau-viz
-                        src="https://public.tableau.com/views/OilDisplacementbyMillionsofBarrelsperDayMbdUSAvsWorld/OilDisplacementUSAvWorld?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
-                    >
+        <div id="oil-displacement" class="section">
+            <h2>Oil Displacement</h2>
+            <p>
+                Oil displacement graphs the decrease in gas and diesel consumption (in millions of barrels per day), resulting from the increased use of EVs. Globally, by 2030, 
+                6 million barrels per day of oil are to be displaced by EVs, and will soon be projected to displace twice that amount by 2035. This is largely attributed to electric 
+                LDVs (light duty vehicles), trucks, buses and 2/3Ws (two and three wheeled vehicles). Electric 2/3Ws are still fairly new but rising in popularity alongside regular EVs, 
+                and can displace other modes of travel such as walking or cycling rather than fossil-powered transport, so while EVs are a key part of transport decarbonization, they are 
+                far from being the only ones. By 2030, China, Europe and the US are projected to surpass 1 million barrels per day each, and at least 2 million barrels per day each by 2035.
+            </p>
+            <div class="viz">
+                <div class="charts">
+                    <div id="v3-1" class="v3">
+                        <tableau-viz
+                            src="https://public.tableau.com/views/OilDisplacementbyMillionsofBarrelsperDayMbdUSAvsWorld/OilDisplacementUSAvWorld?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+                        >
 
-                    </tableau-viz>
-                </div>
-                <div id="v3-2" class="v3 hidden">
-                    <tableau-viz
-                        src="https://public.tableau.com/views/OilDisplacementbyMillionsofBarrelsperDayMbdEuropevsWorld/OilDisplacementEuropevWorld?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
-                    >
+                        </tableau-viz>
+                    </div>
+                    <div id="v3-2" class="v3 hidden">
+                        <tableau-viz
+                            src="https://public.tableau.com/views/OilDisplacementbyMillionsofBarrelsperDayMbdEuropevsWorld/OilDisplacementEuropevWorld?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+                        >
 
-                    </tableau-viz>
-                </div>
-                <div id="v3-3" class="v3 hidden">
-                    <tableau-viz
-                        src="https://public.tableau.com/views/OilDisplacementbyMillionsofBarrelsperDayMbdChinavsWorld/OilDisplacementChinavWorld?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
-                    >
+                        </tableau-viz>
+                    </div>
+                    <div id="v3-3" class="v3 hidden">
+                        <tableau-viz
+                            src="https://public.tableau.com/views/OilDisplacementbyMillionsofBarrelsperDayMbdChinavsWorld/OilDisplacementChinavWorld?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+                        >
 
-                    </tableau-viz>
+                        </tableau-viz>
+                    </div>
                 </div>
-            </div>
-            <div class="buttons">
-                <button id="b3-1">USA vs World</button>
-                <button id="b3-2">Europe vs World</button>
-                <button id="b3-3">China vs World</button>
+                <div class="buttons">
+                    <button id="b3-1">USA vs World</button>
+                    <button id="b3-2">Europe vs World</button>
+                    <button id="b3-3">China vs World</button>
+                </div>
             </div>
         </div>
     </div>
+    <footer>
+        <p>Johnny Hyman</p>
+    </footer>
     
     <script src="script.js"></script>
 </body>

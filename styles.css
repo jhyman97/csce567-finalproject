@@ -14,7 +14,7 @@ header {
     justify-content: space-between;
     color: #91C4D9;
     z-index: 9999;
-    padding: 1rem 2rem;
+    /* padding: 1rem 2rem; */
     border-bottom: 1px solid #91C4D9;
 }
 
@@ -24,6 +24,23 @@ header ul {
 
 header p {
     margin: 0;
+    padding: 1em;
+}
+
+header a {
+    text-decoration: none;
+    padding: 1em;
+    display: block;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+header a:hover {
+    background-color: #91C4D9;
+    color: #213140;
+}
+
+header li {
+    /* padding: 1em; */
 }
 
 .content {
@@ -53,7 +70,7 @@ a {
 }
 
 .charts {
-    flex: 4;
+    flex: 3;
 }
 
 .buttons {
@@ -85,8 +102,27 @@ button {
     color: #91C4D9;
     border: 1px #91C4D9 solid;
     font-size: 3.175rem;
+    padding: 0.5rem;
+    transition: background-color 0.5s, color 0.5s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #91C4D9;
+    color: #213140;
 }
 
 .section {
     margin-bottom: 3em;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px #91C4D9 solid;
+}
+
+.bold {
+    font-weight: bold;
 }
